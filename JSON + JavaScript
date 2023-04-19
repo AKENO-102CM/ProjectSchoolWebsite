@@ -2,26 +2,31 @@
 <html>
 <body>
 
-<p id="richting"></p>
+<div id="richting"></div>
 
 <script>
 let text = '{"studieRichting":[' +
-'{"tweedeGraad":"","derdeGraad":"Latijn-moderne talen" },' +
-'{"tweedeGraad":"","derdeGraad":"Latijn-wiskunde" },' +
-'{"tweedeGraad":"","derdeGraad":"Sportwetenschappen" },' +
-'{"tweedeGraad":"","derdeGraad":"Wetenschappen-wiskunde" },' +
-'{"tweedeGraad":"","derdeGraad":"Economie-moderne talen" },' +
-'{"tweedeGraad":"","derdeGraad":"Economie-wiskunde" },' +
-'{"tweedeGraad":"","derdeGraad":"Humane wetenschappen" },' +
-'{"tweedeGraad":"","derdeGraad":"Informatica- en communicatiewetenschappen" },' +
-'{"tweedeGraad":"","derdeGraad":"Sportbegeleiding" },' +
-'{"tweedeGraad":"","derdeGraad":"Applicatie- en databeheer" },' +
-'{"tweedeGraad":"","derdeGraad":"Gezondheidszorg" },' +
-'{"tweedeGraad":"","derdeGraad":"Basiszorg en ondersteuning" }]}';
+'{"tweedeGraad":"Latijn","derdeGraad":"Latijn-moderne talen" },' +
+'{"tweedeGraad":"Latijn","derdeGraad":"Latijn-wiskunde" },' +
+'{"tweedeGraad":"Sportwetenschappen","derdeGraad":"Sportwetenschappen" },' +
+'{"tweedeGraad":"Natuurwetenschappen","derdeGraad":"Wetenschappen-wiskunde" },' +
+'{"tweedeGraad":"Economische Wetenschappen","derdeGraad":"Economie-moderne talen" },' +
+'{"tweedeGraad":"Economische Wetenschappen","derdeGraad":"Economie-wiskunde" },' +
+'{"tweedeGraad":"Humane wetenschappen","derdeGraad":"Humane wetenschappen" },' +
+'{"tweedeGraad":"Technologische Wetenschappen, Natuurwatenschappen, Bedrijf en Organisatie","derdeGraad":"Informatica- en communicatiewetenschappen" },' +
+'{"tweedeGraad":"Sport","derdeGraad":"Sportbegeleiding" },' +
+'{"tweedeGraad":"Bedrijf en Organisatie","derdeGraad":"Applicatie- en databeheer" },' +
+'{"tweedeGraad":"Zorg en Welzijn","derdeGraad":"Gezondheidszorg" },' +
+'{"tweedeGraad":"Zorg en Welzijn","derdeGraad":"Basiszorg en ondersteuning" }]}';
 
-const obj = JSON.parse(text);
-document.getElementById("richting").innerHTML =
-/*obj.studieRichting[1].tweedeGraad +*/ " " + obj.studieRichting[1].derdeGraad;
+
+for (int i=0 ; i<12 ; i++)	{
+	let studie = document.getElementById("richting");
+	var lijst = document.createElement("p");
+	const obj = JSON.parse(text);
+	richting.append("p");
+	//document.getElementById("richting").innerHTML = obj.studieRichting[i].tweedeGraad + " " + obj.studieRichting[i].derdeGraad;
+}
 </script>
 
 </body>
