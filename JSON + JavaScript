@@ -3,7 +3,6 @@
 <body>
 
 <div id="richting"></div>
-
 <script>
 let text = '{"studieRichting":[' +
 '{"tweedeGraad":"Latijn","derdeGraad":"Latijn-moderne talen" },' +
@@ -19,13 +18,13 @@ let text = '{"studieRichting":[' +
 '{"tweedeGraad":"Zorg en Welzijn","derdeGraad":"Gezondheidszorg" },' +
 '{"tweedeGraad":"Zorg en Welzijn","derdeGraad":"Basiszorg en ondersteuning" }]}';
 
-
-for (int i=0 ; i<12 ; i++)	{
-	let studie = document.getElementById("richting");
-	var lijst = document.createElement("p");
+let studie = document.getElementById("richting");
+for (let i=0 ; i<12 ; i++)	{
+	var p = document.createElement("p");
 	const obj = JSON.parse(text);
-	richting.append("p");
-	//document.getElementById("richting").innerHTML = obj.studieRichting[i].tweedeGraad + " " + obj.studieRichting[i].derdeGraad;
+	document.body.appendChild(studie);
+	studie.appendChild(p);
+	document.getElementsByTagName("div").innerHTML = obj.studieRichting[i].tweedeGraad + " " + obj.studieRichting[i].derdeGraad;
 }
 </script>
 
