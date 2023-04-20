@@ -1,32 +1,22 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<div id="richting"></div>
-<script>
-let text = '{"studieRichting":[' +
-'{"tweedeGraad":"Latijn","derdeGraad":"Latijn-moderne talen" },' +
-'{"tweedeGraad":"Latijn","derdeGraad":"Latijn-wiskunde" },' +
-'{"tweedeGraad":"Sportwetenschappen","derdeGraad":"Sportwetenschappen" },' +
-'{"tweedeGraad":"Natuurwetenschappen","derdeGraad":"Wetenschappen-wiskunde" },' +
-'{"tweedeGraad":"Economische Wetenschappen","derdeGraad":"Economie-moderne talen" },' +
-'{"tweedeGraad":"Economische Wetenschappen","derdeGraad":"Economie-wiskunde" },' +
-'{"tweedeGraad":"Humane wetenschappen","derdeGraad":"Humane wetenschappen" },' +
-'{"tweedeGraad":"Technologische Wetenschappen, Natuurwatenschappen, Bedrijf en Organisatie","derdeGraad":"Informatica- en communicatiewetenschappen" },' +
-'{"tweedeGraad":"Sport","derdeGraad":"Sportbegeleiding" },' +
-'{"tweedeGraad":"Bedrijf en Organisatie","derdeGraad":"Applicatie- en databeheer" },' +
-'{"tweedeGraad":"Zorg en Welzijn","derdeGraad":"Gezondheidszorg" },' +
-'{"tweedeGraad":"Zorg en Welzijn","derdeGraad":"Basiszorg en ondersteuning" }]}';
-
-let studie = document.getElementById("richting");
-for (let i=0 ; i<12 ; i++)	{
-	var p = document.createElement("p");
-	const obj = JSON.parse(text);
-	document.body.appendChild(studie);
-	studie.appendChild(p);
-	document.getElementsByTagName("div").innerHTML = obj.studieRichting[i].tweedeGraad + " " + obj.studieRichting[i].derdeGraad;
+{	
+	"finaliteiten": [
+		{"Naam": "Doorstroom Finaliteit", "BijhorendeStudierichtingen": [
+			{"Naam": "Latijn-moderne talen"},
+			{"Naam": "Latijn-wiskunde"},
+			{"Naam": "Sportwetenschappen"},
+			{"Naam": "Wetenschappen-wiskunde"},
+			{"Naam": "Economie-wiskunde"},
+			{"Naam": "Economie-moderne talen"},
+			{"Naam": "Humane wetenschappen"},
+			{"Naam": "Informatica- en communicatiewetenschappen"}
+		]},
+		{"Naam": "Dubbele Finaliteit", "BijhorendeStudierichtingen": [
+			{"Naam": "Sportbegeleiding"},
+			{"Naam": "Applicatie- en databeheer"},
+			{"Naam": "Gezondheidszorg"}
+		]},
+		{"Naam": "Arbeidsmarktgerichte Finaliteit","BijhorendeStudierichtingen": [
+			{"Naam": "Basiszorg en ondersteuning"}
+		]}
+	]
 }
-</script>
-
-</body>
-</html>
