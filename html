@@ -1,16 +1,152 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet"type="text/css" href="css/style.css">
-	</head>
-<body>
-	<section>
-		<button class="button-73">
-			<h1 class="menu-text">aal</h1>
-		</button>
-	</section>
-    <script>
-		/*TESTJEEEEEE*/
-	</script>      
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/style.css"></link>
+  </head>
+  <body>
+	<div class="container">
+		<div class="stijlbutton1">
+			<div class="left-buttons">
+				<button class="button-73" id="button-1">Button1 hhgfhgfhdghdgh</button>
+				<button class="button-73" id="button-2">Button2 sfdsfdsfsdf</button>
+				<button class="button-73" id="button-3">Button3 sdfsdfsdfgdg</button>
+			</div>
+		</div>
+		<div class="stijlbutton2">
+			<div class="right-buttons">
+				<button>Button 4</button>
+				<button>Button 5</button>
+				<button>Button 6</button>
+				<button>Button 7</button>
+				<button>Button 8</button>
+				<button>Button 9</button>
+				<button>Button 10</button>
+				<button>Button 11</button>
+				<button>Button 12</button>
+				<button>Button 13</button>
+				<button>Button 14</button>
+				<button>Button 15</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		const button1 = document.getElementById("button-1");
+		const buttons4to11 = document.querySelectorAll(".right-buttons button:nth-child(n):nth-child(-n+8)");
+		const button2 = document.getElementById("button-2");
+		const buttons11to14 = document.querySelectorAll(".right-buttons button:nth-child(n+9):nth-child(-n+11)");
+		const button3 = document.getElementById("button-3");
+		const button15 = document.querySelectorAll(".right-buttons button:nth-child(n+12):nth-child(-n+12)");
+
+		button1.addEventListener("mouseover", function() {
+			if (!button1.classList.contains("active")) {
+				button1.style.backgroundColor = "green";
+				buttons4to11.forEach(function(button) {
+					button.style.backgroundColor = "green";
+				});
+			}
+		});
+		button2.addEventListener("mouseover", function() {
+			if (!button2.classList.contains("active")) {
+				button2.style.backgroundColor = "yellow";
+				buttons11to14.forEach(function(button) {
+					button.style.backgroundColor = "yellow";
+				});
+			}
+		});
+		button3.addEventListener("mouseover", function() {
+			if (!button3.classList.contains("active")) {
+				button3.style.backgroundColor = "tomato";
+				button15.forEach(function(button) {
+					button.style.backgroundColor = "tomato";
+				});
+			}
+		});
+
+		button1.addEventListener("mouseout", function() {
+			if (!button1.classList.contains("active")) {
+				button1.style.backgroundColor = "";
+				buttons4to11.forEach(function(button) {
+					button.style.backgroundColor = "";
+				});
+			}
+		});
+		button2.addEventListener("mouseout", function() {
+			if (!button2.classList.contains("active")) {
+				button2.style.backgroundColor = "";
+				buttons11to14.forEach(function(button) {
+					button.style.backgroundColor = "";
+				});
+			}
+		});
+		button3.addEventListener("mouseout", function() {
+			if (!button3.classList.contains("active")) {
+				button3.style.backgroundColor = "";
+				button15.forEach(function(button) {
+					button.style.backgroundColor = "";
+				});
+			}
+		});
+
+
+		button1.addEventListener("click", function() {
+			button1.classList.add("active");
+			button1.style.backgroundColor = "green";
+			buttons4to11.forEach(function(button) {
+				button.style.backgroundColor = "green";
+			});
+
+			document.addEventListener("click", function(e) {
+				if (!button1.contains(e.target) && !buttons4to11[0].parentNode.contains(e.target)) {
+					button1.classList.remove("active");
+					button1.style.backgroundColor = "";
+					buttons4to11.forEach(function(button) {
+						button.style.backgroundColor = "";
+					});
+
+					document.removeEventListener("click", arguments.callee);
+				}
+			});
+		});
+		button2.addEventListener("click", function() {
+			button2.classList.add("active");
+			button2.style.backgroundColor = "yellow";
+			buttons11to14.forEach(function(button) {
+				button.style.backgroundColor = "yellow";
+			});
+
+			document.addEventListener("click", function(e) {
+				if (!button2.contains(e.target) && !buttons11to14[0].parentNode.contains(e.target)) {
+					button2.classList.remove("active");
+					button2.style.backgroundColor = "";
+					buttons11to14.forEach(function(button) {
+						button.style.backgroundColor = "";
+					});
+
+					document.removeEventListener("click", arguments.callee);
+				}
+			});
+		});
+		button3.addEventListener("click", function() {
+			button3.classList.add("active");
+			button3.style.backgroundColor = "tomato";
+			button15.forEach(function(button) {
+				button.style.backgroundColor = "tomato";
+			});
+
+			document.addEventListener("click", function(e) {
+				if (!button3.contains(e.target) && !button15[0].parentNode.contains(e.target)) {
+					button3.classList.remove("active");
+					button3.style.backgroundColor = "";
+					button15.forEach(function(button) {
+						button.style.backgroundColor = "";
+					});
+
+					document.removeEventListener("click", arguments.callee);
+				}
+			});
+		});
+	</script>
+  </body>
 </html>
