@@ -2,36 +2,257 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Website</title>
+	<title>Campus De Tandem</title>
     <link rel="stylesheet" href="css/style.css"></link>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stijlen/knop.css">
+    <link rel="stylesheet" type="text/css" href="stijlen/stijl.css">
+	
+	<style>
+        @font-face{
+            font-family: 'Aileron'; 
+            font-weight: 400;
+            src: url(chrome-extension://mfidniedemcgceagapgdekdbmanojomk/font/Roboto-Regular.ttf);  
+        }
+        @font-face{
+            font-family: 'Aileron'; 
+            font-weight: 400;
+            src: url(chrome-extension://mfidniedemcgceagapgdekdbmanojomk/font/Aileron-Regular.ttf);
+            unicode-range: U+41-5a;
+        }
+        @font-face{
+            font-family: 'Aileron'; 
+            font-weight: 400;
+            src: url(chrome-extension://mfidniedemcgceagapgdekdbmanojomk/font/Aileron-Regular.ttf);
+            unicode-range: U+61-7a;
+        }
+        
+        @font-face{
+            font-family: 'Aileron'; 
+            font-weight: 600;
+            src: url(chrome-extension://mfidniedemcgceagapgdekdbmanojomk/font/Roboto-Medium.ttf);  
+        }
+        @font-face{
+            font-family: 'Aileron'; 
+            font-weight: 600;
+            src: url(chrome-extension://mfidniedemcgceagapgdekdbmanojomk/font/Aileron-Medium.ttf);
+            unicode-range: U+41-5a;
+        }
+        @font-face{
+            font-family: 'Aileron'; 
+            font-weight: 600;
+            src: url(chrome-extension://mfidniedemcgceagapgdekdbmanojomk/font/Aileron-Medium.ttf);
+            unicode-range: U+61-7a;
+        }
+
+        @font-face{
+            font-family: 'Aileron'; 
+            font-weight: 700;
+            src: url(chrome-extension://mfidniedemcgceagapgdekdbmanojomk/font/Roboto-Bold.ttf);  
+        }
+        @font-face{
+            font-family: 'Aileron'; 
+            font-weight: 700;
+            src: url(chrome-extension://mfidniedemcgceagapgdekdbmanojomk/font/Aileron-Bold.ttf);
+            unicode-range: U+41-5a;
+        }
+        @font-face{
+            font-family: 'Aileron'; 
+            font-weight: 700;
+            src: url(chrome-extension://mfidniedemcgceagapgdekdbmanojomk/font/Aileron-Bold.ttf);
+            unicode-range: U+61-7a;
+        }
+     
+    </style>
+	
   </head>
   <body>
+	<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white static-top">
+        <div class="container">
+            <a class="navbar-brand" href="index">
+                <img src="img/schoolLogo.png" class="responsive" alt="atheneum logo">
+            </a>
+            
+
+                <div id="myNav" class="overlay" style="width: 0%;">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <div class="overlay-content">
+                        <a class="nav" href="index">Welkom</a>
+                        <a class="nav" href="visie-werking">Onze school</a>
+                        <a class="nav" href="praktisch">Praktisch</a>
+                        <a class="nav" href="studieaanbod">Studieaanbod</a>
+                        <a class="nav" href="activiteiten">Activiteiten</a>
+                        <a class="nav" href="contact">Contact</a>
+                        <a class="nav" href="inschrijven" style="color: #66ff33;">Inschrijven</a>
+                    </div>
+                </div>
+                <span class="responsive" style="cursor:pointer" onclick="openNav()">☰ MENU</span>
+
+                <script>
+                    function openNav() {
+                        document.getElementById("myNav").style.width = "100%";
+                    }
+
+                    function closeNav() {
+                        document.getElementById("myNav").style.width = "0%";
+                    }
+
+                </script>
+		</div>
+    </nav>
+	</header>
+	<style>
+    img.responsive {
+        width: 220px;
+    }
+
+    @media screen and (max-width: 768px) {
+        img.responsive {
+            width: 125px;
+        }
+    }
+
+    @media screen and (max-width: 413px) {ik
+        img.responsive {
+            width: 100px;
+        }
+    }
+
+    span.responsive {
+        font-size: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+        span.responsive {
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 413px) {
+        span.responsive {
+            font-size: 17px;
+        }
+    }
+
+    body {
+        font-family: 'Lato', sans-serif;
+    }
+
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+        color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+    }
+
+    @media screen and (max-height: 450px) {
+        .overlay a {
+            font-size: 20px
+        }
+
+        .overlay .closebtn {
+            font-size: 40px;
+            top: 15px;
+            right: 35px;
+        }
+    }
+        @media screen and (max-width: 767px) {
+            a.nav {
+                font-size: 22px;
+            }
+    }
+
+</style>
+   
+
+	
+	
+
+
+</div></div><div id="65eaab28-4a46-4315-86f5-d88692c6ed52" style="display: block !important; z-index: 2147483647 !important;"></div>
 	<div class="container">
 		<div class="stijlbutton1">
 			<div class="left-buttons">
-				<button class="button-73" id="button-1">Button1 hhgfhgfhdghdgh</button>
-				<button class="button-73" id="button-2">Button2 sfdsfdsfsdf</button>
-				<button class="button-73" id="button-3">Button3 sdfsdfsdfgdg</button>
+				<button class="button-73" id="button-1"></button>
+				<button class="button-73" id="button-2"></button>
+				<button class="button-73" id="button-3"></button>
 			</div>
 		</div>
 		<div class="stijlbutton2">
 			<div class="right-buttons">
-				<button>Button 4</button>
-				<button>Button 5</button>
-				<button>Button 6</button>
-				<button>Button 7</button>
-				<button>Button 8</button>
-				<button>Button 9</button>
-				<button>Button 10</button>
-				<button>Button 11</button>
-				<button>Button 12</button>
-				<button>Button 13</button>
-				<button>Button 14</button>
-				<button>Button 15</button>
+				<button id="btn4"></button>
+				<button id="btn5"></button>
+				<button id="btn6"></button>
+				<button id="btn7"></button>
+				<button id="btn8"></button>
+				<button id="btn9"></button>
+				<button id="btn10"></button>
+				<button id="btn11"></button>
+				<button id="btn12"></button>
+				<button id="btn13"></button>
+				<button id="btn14"></button>
+				<button id="btn15"></button>
 			</div>
 		</div>
 	</div>
 	<script>
+		
+		fetch("data.json").then(response => response.json()).then(data => {
+            console.log(data.finaliteiten[0]);
+            document.querySelector("#button-1").innerText = data.finaliteiten[0].Naam;
+            document.querySelector("#button-2").innerText = data.finaliteiten[1].Naam;
+            document.querySelector("#button-3").innerText = data.finaliteiten[2].Naam;
+			document.querySelector("#btn4").innerText = data.finaliteiten[0].BijhorendeStudierichtingen[0].Naam;
+			document.querySelector("#btn5").innerText = data.finaliteiten[0].BijhorendeStudierichtingen[1].Naam;
+			document.querySelector("#btn6").innerText = data.finaliteiten[0].BijhorendeStudierichtingen[2].Naam;
+			document.querySelector("#btn7").innerText = data.finaliteiten[0].BijhorendeStudierichtingen[3].Naam;
+			document.querySelector("#btn8").innerText = data.finaliteiten[0].BijhorendeStudierichtingen[4].Naam;
+			document.querySelector("#btn9").innerText = data.finaliteiten[0].BijhorendeStudierichtingen[5].Naam;
+			document.querySelector("#btn10").innerText = data.finaliteiten[0].BijhorendeStudierichtingen[6].Naam;
+			document.querySelector("#btn11").innerText = data.finaliteiten[0].BijhorendeStudierichtingen[7].Naam;
+			document.querySelector("#btn12").innerText = data.finaliteiten[1].BijhorendeStudierichtingen[0].Naam;
+			document.querySelector("#btn13").innerText = data.finaliteiten[1].BijhorendeStudierichtingen[1].Naam;
+			document.querySelector("#btn14").innerText = data.finaliteiten[1].BijhorendeStudierichtingen[2].Naam;
+			document.querySelector("#btn15").innerText = data.finaliteiten[2].BijhorendeStudierichtingen[0].Naam;
+		})
+		
 		const button1 = document.getElementById("button-1");
 		const buttons4to11 = document.querySelectorAll(".right-buttons button:nth-child(n):nth-child(-n+8)");
 		const button2 = document.getElementById("button-2");
@@ -149,4 +370,46 @@
 		});
 	</script>
   </body>
+  <footer class="page-footer font-small pt-4">
+    <div class="container-fluid text-center text-md-left">
+        <div class="responsive-footer">
+            <div class="row">
+                <div class="col-md-4 mt-md-0 mt-3">
+                    <h5 class="text-uppercase">CONTACTEER ONS</h5>
+                    <p class="footer">Heeft u vragen in verband met onze school?<br>Klik dan op een van deze links!</p>
+                </div>
+                <div class="col-md-4 mb-md-0 mb-3">
+                    <h5 class="text-uppercase">AFDELINGEN</h5>
+                    <ul class="list-unstyled">
+                        <li class="footer">
+                            <a href="https://minicreche-habibi.be/" target="_blank">Minicrèche Habibi</a>
+                        </li>
+                        <li class="footer">
+                            <a href="https://basisschool-detandem.be/" target="_blank">GO! basisschool De Tandem</a>
+                        </li>
+                        <li class="footer">
+                            <a href="https://hetdroomschip.be/" target="_blank">GO! leefschool Het Droomschip</a>
+                        </li>
+                        <li class="footer">
+                            <a href="contact.php">GO! atheneum &amp; leefschool De Tandem</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-md-0 mb-3">
+                    <h5 class="text-uppercase">SOCIALE MEDIA</h5>
+                    <ul class="list-unstyled">
+                        <li class="footer">
+                            <a class="footer" href="https://www.facebook.com/KaDeTandem/" target="_blank"><img src="img/fb.png" height="50px" width="50px"></a>
+                            <a class="footer" href="https://www.instagram.com/atheneum.eeklo/" target="_blank"><img src="img/ig.png" height="50px" width="50px"></a>
+                            <a class="footer" href="https://tandem.smartschool.be/login" target="_blank"><img src="img/sm.png" height="50px" width="50px"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="#"> Campus De Tandem</a>
+    </div>
+</footer>
 </html>
