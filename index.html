@@ -88,7 +88,7 @@
                         <a class="nav" href="inschrijven" style="color: #66ff33;">Inschrijven</a>
                     </div>
                 </div>
-                <span class="responsive" style="cursor:pointer" onclick="openNav()">☰ MENU</span>
+                <span class="responsive" style="cursor:pointer" onclick="openNav()">►MENU</span>
 
                 <script>
                     function openNav() {
@@ -262,9 +262,9 @@
 
 		button1.addEventListener("mouseover", function() {
 			if (!button1.classList.contains("active")) {
-				button1.style.backgroundColor = "green";
+				button1.style.backgroundColor = "lawngreen";
 				buttons4to11.forEach(function(button) {
-					button.style.backgroundColor = "green";
+					button.style.backgroundColor = "lawngreen";
 				});
 			}
 		});
@@ -313,9 +313,9 @@
 
 		button1.addEventListener("click", function() {
 			button1.classList.add("active");
-			button1.style.backgroundColor = "green";
+			button1.style.backgroundColor = "lawngreen";
 			buttons4to11.forEach(function(button) {
-				button.style.backgroundColor = "green";
+				button.style.backgroundColor = "lawngreen";
 			});
 
 			document.addEventListener("click", function(e) {
